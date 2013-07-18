@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+    <ScrollView android:id="@+id/login_form"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_dabeijing_480x800">
+        <LinearLayout android:orientation="vertical"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent">
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Qimi帐号注册"
+                        android:textColor="#424242"
+                        android:id="@+id/textView" android:layout_gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="帐　　号："
+                        android:textColor="#424242"
+                        android:id="@+id/textView2"/>
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:ems="10"
+                        android:textColor="#bfbfbf"
+                        android:id="@+id/userName" android:text="请输入用户帐号"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="密　　码："
+                        android:textColor="#424242"
+                        android:id="@+id/textView3"/>
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:textColor="#bfbfbf"
+                        android:ems="10"
+                        android:id="@+id/password" android:text="........"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="验证密码："
+                        android:textColor="#424242"
+                        android:id="@+id/textView4"/>
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:textColor="#bfbfbf"
+                        android:ems="10"
+                        android:id="@+id/passVerify" android:text="........"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="注册"
+                        android:id="@+id/registerBtn"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+            android:id="@+id/login_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+        <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" />
+
+        <TextView
+                android:id="@+id/login_status_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/login_progress_signing_in"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+</merge>

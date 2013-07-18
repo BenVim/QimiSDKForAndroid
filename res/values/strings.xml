@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" >QimiSDK</string>
+    <string name="action_settings" >Settings</string>
+    <string name="appID">21</string>
+    <string name="sign">7a92bba4670d479c5514720c1cf46aab</string>
+    <string name="api" >http://api.qimi.com/api.php</string>
+    <string name="username">请输入用户帐号</string>
+    <string name="userpass">........</string>
+    <string name="ok">确定</string>
+    <string name="login_sucssful">登录成功！</string>
+    <string name="register_sucssful">注册成功！</string>
+    <string name="login_progress_signing_in">Signing in&#8230;</string>
+    <string name="error_incorrect_password">对不起您的密码不正确！</string>
+    <string name="error_field_required">该字段不能为空！</string>
+    <string name="error_invalid_password">密码长能小于4个字符</string>
+    <string name="error_invalid_email">用户名必须是电子邮箱地址！</string>
+    <string name="error_Verify_pass">验证密码不能为空！</string>
+    <string name="error_diff_password">输入的两次密码不一样！</string>
+    <!--alipay string-->
+    <string name="remote_call_failed">Failure calling remote service</string>
+    <string name="partnerHint">"partner"</string>
+    <string name="sellerHint">"seller"</string>
+    <string name="out_trade_noHint">"out_trade_no"</string>
+    <string name="subjectHint">"subject"</string>
+    <string name="bodyHint">"body"</string>
+    <string name="total_feeHint">"total_fee"</string>
+    <string name="notify_urlHint">"notify_url"</string>
+    <string name="charsetHint">"charset"</string>
+    <string name="signTypeHint">"signType"</string>
+    <string name="confirm_install_hint">"安装提示"</string>
+    <string name="confirm_install">"为保证您的交易安全，需要您安装支付宝安全支付服务，才能进行付款。\n\n点击确定，立即安装。"</string>
+    <string name="Ensure">"确定"</string>
+    <string name="Cancel">"取消"</string>
+    <string name="check_sign_failed">您的订单信息已被非法篡改。</string>
+    <string name="menu_settings">Settings</string>
+    <!--alipay string end-->
+
+</resources>
