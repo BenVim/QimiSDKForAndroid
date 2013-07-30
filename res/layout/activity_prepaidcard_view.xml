@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:background="@drawable/bg_dabeijing_480x800">
-
+<LinearLayout android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    
     <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -33,97 +36,103 @@
     </RelativeLayout>
     <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:orientation="vertical"
             android:layout_height="wrap_content" android:layout_gravity="center">
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="16sp"
                 android:text="请选择充值金额：（1元=10元宝）"
                 android:textColor="#414141"
                 android:id="@+id/textView2"/>
-        <RadioGroup
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
             <TableLayout
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent">
                 <TableRow
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent">
-                    <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="10元"
-                            android:textColor="#414141"
-                            android:id="@+id/radioButton" android:checked="false"/>
-                    <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="20元"
-                            android:textColor="#414141"
-                            android:id="@+id/radioButton2" android:checked="false"/>
-                    <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="30元"
-                            android:textColor="#414141"
-                            android:id="@+id/radioButton7" android:checked="false"
-                            android:layout_gravity="left|center_vertical" android:layout_column="2"/>
-                    <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="50元"
-                            android:textColor="#414141"
-                            android:id="@+id/radioButton3" android:checked="false" android:layout_column="3"/>
-                </TableRow>
-                <TableRow
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent">
-                    <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="100元"
-                            android:textColor="#414141"
-                            android:id="@+id/radioButton4" android:checked="false"/>
-                    <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="300元"
-                            android:textColor="#414141"
-                            android:id="@+id/radioButton5" android:checked="false"/>
-                    <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="500元"
-                            android:textColor="#414141"
-                            android:id="@+id/radioButton6" android:checked="false"/>
-                </TableRow>
-                <TableRow
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent">
-                </TableRow>
 
+                    <Button
+                        android:id="@+id/b10Btn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="10元"
+                        android:layout_weight="1"   />
+
+                    <Button
+                        android:id="@+id/b20Btn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="20元"
+                        android:layout_weight="1"   />
+
+                    <Button
+                        android:id="@+id/b30Btn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="30元"
+                        android:layout_weight="1"   />
+
+                    <Button
+                        android:id="@+id/b50Btn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="50元"
+                        android:layout_weight="1"   />
+
+                </TableRow>
+                <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                    <Button
+                        android:id="@+id/b100Btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100元"
+                        android:layout_weight="1"   />
+
+                    <Button
+                        android:id="@+id/b300Btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="300元"
+                        android:layout_weight="1"   />
+                    
+                    <Button
+                        android:id="@+id/b500Btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="500元"
+                        android:layout_weight="1"   />
+
+                </TableRow>
+                <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                </TableRow>
             </TableLayout>
-        </RadioGroup>
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="输入充值金额："
+        android:textSize="16sp"
+        android:textColor="#414141" />
+
     <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="输入充值金额："
-                android:textColor="#414141"
-                android:id="@+id/textView3" android:layout_gravity="center_horizontal|top"/>
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:textColor="#414141"
                 android:ems="10"
-                android:id="@+id/editText" android:layout_gravity="center_horizontal|top"/>
+                android:id="@+id/moneyEdit" android:layout_gravity="center_horizontal|top"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -133,50 +142,37 @@
     </LinearLayout>
     <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="您将充值"
-                android:textColor="#414141"
-                android:id="@+id/textView5"/>
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="100"
-                android:id="@+id/textView6" android:layout_gravity="center_horizontal|top" android:textColor="#ff0000"
-                android:paddingLeft="5dp" android:paddingRight="5dp"/>
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="元宝"
-                android:textColor="#414141"
-                android:id="@+id/textView7" android:layout_gravity="center_horizontal|top"/>
-    </LinearLayout>
-    <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal"
             android:layout_height="wrap_content" android:layout_gravity="center">
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="16sp"
                 android:text="请选择充值卡面额："
                 android:textColor="#414141"
                 android:id="@+id/textView2"/>
+
         <Spinner
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/spinner" android:spinnerMode="dialog"/>
+            android:id="@+id/spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="36dp"
+            android:spinnerMode="dialog" />
+
     </LinearLayout>
+    <LinearLayout
+        	android:layout_width="80sp"
+        	android:layout_gravity="center"
+        	android:layout_height="1dp"
+        	android:layout_marginTop="5dp"
+        	android:layout_marginBottom="5dp"
+        	android:background="#b2b2b2b2">
+    </LinearLayout>
+    
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="16sp"
             android:text="请输入您的充值卡信息："
             android:textColor="#414141"
             android:id="@+id/textView10"/>
@@ -196,7 +192,7 @@
                 android:inputType="number"
                 android:ems="10"
                 android:textColor="#414141"
-                android:id="@+id/editText2"/>
+                android:id="@+id/cardnumEdit"/>
     </LinearLayout>
     <LinearLayout
             android:layout_width="fill_parent"
@@ -214,13 +210,13 @@
                 android:inputType="number"
                 android:ems="10"
                 android:textColor="#414141"
-                android:id="@+id/editText3"/>
+                android:id="@+id/cardpassEdit"/>
     </LinearLayout>
     <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="下一步"
-            android:id="@+id/button" android:singleLine="false"/>
+            android:id="@+id/submit" android:singleLine="false"/>
     <LinearLayout
             android:layout_width="wrap_content"
             android:orientation="vertical"
@@ -245,3 +241,4 @@
                 android:id="@+id/textView21"/>
     </LinearLayout>
 </LinearLayout>
+</ScrollView>

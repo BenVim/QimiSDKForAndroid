@@ -26,7 +26,6 @@ public class QimiAlipayView extends Activity {
 
     static String TAG = "Pay";
     private ProgressDialog mProgress = null;
-
     private Button mB10Btn;
     private Button mB20Btn;
     private Button mB30Btn;
@@ -43,12 +42,18 @@ public class QimiAlipayView extends Activity {
     private float m_money;
     private String m_parent;
     private String m_seller;
+    private String m_notifyUrl;
     private String m_private;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alipay_view);
 
+        m_parent = PartnerConfig.PARTNER;
+        m_seller = PartnerConfig.SELLER;
+        m_private=PartnerConfig.RSA_PRIVATE;
+        m_notifyUrl= getString(R.string.m_notifyUrl);
+        
         Intent i = getIntent();
         m_money = i.getFloatExtra("money", 0);
 
@@ -70,7 +75,7 @@ public class QimiAlipayView extends Activity {
         mInputMoneyEdit = (EditText)findViewById(R.id.editMoney);
         mSubmitBtn   = (Button)findViewById(R.id.submit);
         update();
-        addList();
+        addListen();
     }
 
     private void update()
@@ -79,7 +84,7 @@ public class QimiAlipayView extends Activity {
         mInputMoneyEdit.setText(m_money+"");
     }
 
-    private void addList()
+    private void addListen()
     {
         mbackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,18 +104,11 @@ public class QimiAlipayView extends Activity {
         mSubmitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //submit;
-            	//alixPay();
-            	/*
-            	String order, 
-    			String product, 
-    			String productDes, 
-    			String appScheme, 
-    			String parent, 
-    			String seller, 
-    			String notifyUrl,
-    			String alipayKey, 
-    			float  price*/
+            	Intent i = new Intent();
+            	i.putExtra("money", m_money);
+            	i.setClass(QimiAlipayView.this, QimiOrder.class);
+            	
+            	startActivityForResult(i, 0);
             }
         });
 
@@ -196,12 +194,26 @@ public class QimiAlipayView extends Activity {
         });
     }
     
-    /**
-     * request Order;
-     */
-    private void loadOrder()
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) 
     {
-    	
+    	String orderStr="";
+		switch (resultCode) {
+			case RESULT_OK:
+				Bundle b=data.getExtras();  //data为B中回传的Intent
+				orderStr=b.getString("order");//str即为回传的值"Hello, this is B speaking"
+				alixPay(orderStr,
+						"点点西游", 
+						"点点西游充值游戏币", 
+						"pay",
+						m_parent,
+						m_seller,
+						m_notifyUrl,
+						m_private,
+						m_money);
+				break;
+			default:
+				break;
+		}
     }
 
     public void alixPay(String order, 
@@ -211,12 +223,12 @@ public class QimiAlipayView extends Activity {
 			String parent, 
 			String seller, 
 			String notifyUrl,
-			String alipayKey, 
+			String alipayKey,
 			float  price) {
 
-		m_parent = parent;
-		m_seller = seller;
-		m_private = alipayKey;
+//		m_parent = parent;
+//		m_seller = seller;
+//		m_private = alipayKey;
 		price = 0.01f;
 		
 		// check to see if the MobileSecurePay is already installed.

@@ -207,7 +207,7 @@ public class MobileSecurePayHelper {
 	 * 检查是否有新版本，如果有，返回apk下载地址
 	 * 
 	 * @param packageInfo
-	 *            {@link android.content.pm.PackageInfo}
+	 *            {@link PackageInfo}
 	 * @return
 	 */
 	public String checkNewUpdate(PackageInfo packageInfo) {

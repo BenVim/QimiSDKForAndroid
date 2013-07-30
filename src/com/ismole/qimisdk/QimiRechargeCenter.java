@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 /**
- * Qimi充值中心
+ * 奇米充值中心
  * Created by Ben on 7/16/13.
  */
 public class QimiRechargeCenter extends Activity {
@@ -24,7 +24,7 @@ public class QimiRechargeCenter extends Activity {
     private ImageButton ltImageBtn;
     private ImageButton dxImageBtn;
     private QimiUserModel mUserModel;
-    private float m_money;//充值的金额
+    private float m_money;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

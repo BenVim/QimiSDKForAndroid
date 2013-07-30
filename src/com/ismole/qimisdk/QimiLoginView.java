@@ -6,6 +6,7 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -16,6 +17,7 @@ import android.view.MotionEvent;
 import android.widget.Button;
 import android.widget.EditText;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -195,6 +197,7 @@ public class QimiLoginView extends Activity {
         QimiUserModel qimiUserModel = new QimiUserModel();
         qimiUserModel.initData(strResult);
         QimiPlatform.getInstance().setM_userModel(qimiUserModel);
+        
     }
 
     private void dispose()

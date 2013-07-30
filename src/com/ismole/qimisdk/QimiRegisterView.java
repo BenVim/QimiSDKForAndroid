@@ -33,7 +33,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 
+ * 奇米登录模块
  * Created by Ben on 7/16/13.
  */
 public class QimiRegisterView extends Activity {
@@ -79,10 +79,7 @@ public class QimiRegisterView extends Activity {
         userName.setOnTouchListener(new EditText.OnTouchListener(){
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-
-                //用ontouch事件，加个判断条件
                 if (event.getAction()== MotionEvent.ACTION_DOWN) {
-                    //执行操作
                     String str = userName.getText().toString();
                     if (str.equals(getString(R.string.username)))
                     {
@@ -214,7 +211,7 @@ public class QimiRegisterView extends Activity {
             String p = userPass.getText().toString();
             String m = getSign();
             try{
-                //http地址
+                //httpÂú∞ÂùÄ
                 String httpUrl = getString(R.string.api);
                 HttpPost httpRequest = new HttpPost(httpUrl);
                 List<NameValuePair> mData = new ArrayList<NameValuePair>();
@@ -233,10 +230,9 @@ public class QimiRegisterView extends Activity {
                 HttpClient httpclient = new DefaultHttpClient();
                 HttpResponse httpResponse = httpclient.execute(httpRequest);
 
-                //HttpStatus.SC_OK表示连接成功
+                //HttpStatus.SC_OK
                 if (httpResponse.getStatusLine().getStatusCode() == HttpStatus.SC_OK)
                 {
-                    //取得返回的字符串
                     String strResult = EntityUtils.toString(httpResponse.getEntity());
                     return strResult;
                 }
@@ -278,7 +274,7 @@ public class QimiRegisterView extends Activity {
                                 setMessage(msg).
                                 setPositiveButton(getString(R.string.ok), null).create();
                         alertDialog.show();
-                        //失败
+                        //
                     }
                 }catch (Exception e)
                 {

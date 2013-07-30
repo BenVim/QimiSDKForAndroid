@@ -2,11 +2,13 @@ package com.ismole.qimisdk;
 
 /**
  * Qimi SDK MainClass
- * 奇米平台主类
  * Created by Ben on 7/16/13.
  */
 public class QimiPlatform {
     private static QimiPlatform instance = null;
+    private int m_sId;
+    private int m_appId;
+    private String m_appKey;
 
     public boolean isLogined() {
         return isLogined;
@@ -33,6 +35,30 @@ public class QimiPlatform {
         }
         return instance;
     }
+
+	public String getM_appKey() {
+		return m_appKey;
+	}
+
+	public void setM_appKey(String m_appKey) {
+		this.m_appKey = m_appKey;
+	}
+
+	public int getM_appId() {
+		return m_appId;
+	}
+
+	public void setM_appId(int m_appId) {
+		this.m_appId = m_appId;
+	}
+
+	public int getM_sId() {
+		return m_sId;
+	}
+
+	public void setM_sId(int m_sId) {
+		this.m_sId = m_sId;
+	}
 
 
 

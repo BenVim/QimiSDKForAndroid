@@ -3,7 +3,7 @@ package com.ismole.qimisdk;
 import org.json.JSONObject;
 
 /**
- * 用户MDEL
+ * 奇米用户MODEL
  * Created by Ben on 7/16/13.
  */
 public class QimiUserModel {

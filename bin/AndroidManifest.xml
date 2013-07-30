@@ -26,6 +26,7 @@
         <activity android:name=".QimiRechargeCenter" android:theme="@android:style/Theme.NoTitleBar"/>
         <activity android:name=".QimiAlipayView" android:theme="@android:style/Theme.NoTitleBar"/>
         <activity android:name=".QimiPrepaidCardView" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:name=".QimiOrder" android:theme="@android:style/Theme.Dialog"/>
     </application>
 	<uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />

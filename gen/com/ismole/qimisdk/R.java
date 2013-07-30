@@ -43,8 +43,8 @@ public final class R {
         public static final int webbg=0x7f020014;
     }
     public static final class id {
-        public static final int action_settings=0x7f09003e;
-        public static final int alipayBtn=0x7f090035;
+        public static final int action_settings=0x7f090037;
+        public static final int alipayBtn=0x7f09002e;
         public static final int b100Btn=0x7f090008;
         public static final int b10Btn=0x7f090004;
         public static final int b20Btn=0x7f090005;
@@ -59,11 +59,10 @@ public final class R {
         public static final int button4=0x7f090020;
         public static final int button5=0x7f090021;
         public static final int button6=0x7f090022;
-        public static final int dxBtn=0x7f09003b;
+        public static final int cardnumEdit=0x7f090028;
+        public static final int cardpassEdit=0x7f09002a;
+        public static final int dxBtn=0x7f090034;
         public static final int editMoney=0x7f09000c;
-        public static final int editText=0x7f09002b;
-        public static final int editText2=0x7f090030;
-        public static final int editText3=0x7f090032;
         public static final int forget=0x7f090018;
         public static final int helpBtn=0x7f090002;
         public static final int loginBtn=0x7f090019;
@@ -71,30 +70,24 @@ public final class R {
         public static final int login_form=0x7f090014;
         public static final int login_status=0x7f09001b;
         public static final int login_status_message=0x7f09001c;
-        public static final int ltBtn=0x7f09003a;
+        public static final int ltBtn=0x7f090033;
         public static final int mCashTxt=0x7f09000f;
-        public static final int menu_settings=0x7f09003d;
-        public static final int moneyTxt=0x7f090033;
-        public static final int passVerify=0x7f09003c;
+        public static final int menu_settings=0x7f090036;
+        public static final int moneyEdit=0x7f090024;
+        public static final int moneyTxt=0x7f09002b;
+        public static final int passVerify=0x7f090035;
         public static final int password=0x7f090016;
-        public static final int qimiBtn=0x7f090034;
-        public static final int radioButton=0x7f090024;
-        public static final int radioButton2=0x7f090025;
-        public static final int radioButton3=0x7f090027;
-        public static final int radioButton4=0x7f090028;
-        public static final int radioButton5=0x7f090029;
-        public static final int radioButton6=0x7f09002a;
-        public static final int radioButton7=0x7f090026;
+        public static final int qimiBtn=0x7f09002d;
         public static final int registerBtn=0x7f09001a;
         public static final int remember=0x7f090017;
-        public static final int spinner=0x7f09002d;
+        public static final int spinner=0x7f090025;
         public static final int submit=0x7f090011;
-        public static final int szBtn=0x7f090036;
+        public static final int szBtn=0x7f09002f;
         public static final int textView=0x7f090001;
-        public static final int textView10=0x7f09002e;
-        public static final int textView11=0x7f090037;
-        public static final int textView12=0x7f090038;
-        public static final int textView13=0x7f090039;
+        public static final int textView10=0x7f090026;
+        public static final int textView11=0x7f090030;
+        public static final int textView12=0x7f090031;
+        public static final int textView13=0x7f090032;
         public static final int textView2=0x7f090003;
         public static final int textView20=0x7f090012;
         public static final int textView21=0x7f090013;
@@ -103,8 +96,8 @@ public final class R {
         public static final int textView5=0x7f09000e;
         public static final int textView6=0x7f09002c;
         public static final int textView7=0x7f090010;
-        public static final int textView8=0x7f09002f;
-        public static final int textView9=0x7f090031;
+        public static final int textView8=0x7f090027;
+        public static final int textView9=0x7f090029;
         public static final int userName=0x7f090015;
     }
     public static final class layout {
@@ -114,6 +107,7 @@ public final class R {
         public static final int activity_prepaidcard_view=0x7f030003;
         public static final int activity_rechargecenter_view=0x7f030004;
         public static final int activity_register_view=0x7f030005;
+        public static final int qimi_order_view=0x7f030006;
     }
     public static final class menu {
         public static final int activity_main=0x7f080000;
@@ -139,11 +133,13 @@ public final class R {
         public static final int error_invalid_password=0x7f06000d;
         public static final int login_progress_signing_in=0x7f06000a;
         public static final int login_sucssful=0x7f060008;
+        public static final int m_notifyUrl=0x7f060022;
         public static final int menu_settings=0x7f060020;
         public static final int notify_urlHint=0x7f060018;
         public static final int ok=0x7f060007;
         public static final int out_trade_noHint=0x7f060014;
         public static final int partnerHint=0x7f060012;
+        public static final int qimi_order_url=0x7f060021;
         public static final int register_sucssful=0x7f060009;
         /** alipay string
          */

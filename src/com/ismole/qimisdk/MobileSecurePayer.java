@@ -17,7 +17,6 @@ import android.os.IBinder;
 import android.os.Message;
 import android.os.RemoteException;
 
-
 import com.alipay.android.app.IAlixPay;
 import com.alipay.android.app.IRemoteServiceCallback;
 
@@ -42,8 +41,7 @@ public class MobileSecurePayer {
 			// wake up the binder to continue.
 			// 获得通信通道
 			synchronized (lock) {
-                mAlixPay =IAlixPay.Stub.asInterface(service);
-				//mAlixPay = IAlixPay.Stub.asInterface(service);
+				mAlixPay = IAlixPay.Stub.asInterface(service);
 				lock.notify();
 			}
 		}
